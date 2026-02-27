@@ -14,6 +14,11 @@ S-Tier Components:
 - RealDataConnector: Live IBKR + Polygon + FRED data
 - SignalProducerRegistry: Standardized signal emission
 - LiveValidationTracker: Outcome tracking and accuracy monitoring
+
+S++ Tier Components:
+- ConsensusCascade: Multi-system consensus with cascade multipliers
+- SPPValidationTracker: 60-day validation, drift detection, calibration
+- CrossLayerValidator: MACRO/RISK/ALPHA alignment scoring
 """
 
 from .macro import MacroIntelligence, MacroIntelligenceReport
@@ -53,6 +58,25 @@ from .validation import (
     run_validation_update,
 )
 
+# S++ Tier modules
+from .spp_validation import (
+    SPPValidationTracker,
+    SPPValidationReport,
+    DriftAlert,
+    DriftSeverity,
+    CalibrationResult,
+)
+from .consensus import (
+    ConsensusCascade,
+    ConsensusLevel,
+    ConsensusResult,
+    CrossLayerValidator,
+)
+from .spp_runner import (
+    run_spp_intelligence,
+    print_spp_status,
+)
+
 __all__ = [
     # Core Intelligence
     "MacroIntelligence",
@@ -90,4 +114,16 @@ __all__ = [
     "SystemAccuracy",
     "ValidationReport",
     "run_validation_update",
+    # S++ Tier
+    "SPPValidationTracker",
+    "SPPValidationReport",
+    "DriftAlert",
+    "DriftSeverity",
+    "CalibrationResult",
+    "ConsensusCascade",
+    "ConsensusLevel",
+    "ConsensusResult",
+    "CrossLayerValidator",
+    "run_spp_intelligence",
+    "print_spp_status",
 ]
