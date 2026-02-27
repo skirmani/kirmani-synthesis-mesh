@@ -60,4 +60,21 @@ __all__ = [
     "AlphaIntelligenceReport",
     "CrossSystemIntelligenceEngine",
     "UnifiedIntelligenceReport",
+    # Elite Pattern - Window Summarizers
+    "RollingZScore",
+    "DecayWeightedMean",
+    "NthMoment",
+    "CrossCorrelationWindow",
+    "SignalSummarizerPipeline",
+    "create_summarizer_pipeline",
 ]
+
+# Elite Patterns
+from .window_summarizers import (
+    RollingZScore,
+    DecayWeightedMean,
+    NthMoment,
+    CrossCorrelationWindow,
+    SignalSummarizerPipeline,
+    create_summarizer_pipeline,
+)
