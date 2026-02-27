@@ -25,9 +25,20 @@ from .detection import ContradictionDetector, ConfirmationDetector
 from .dashboard import DashboardGenerator
 from .runners import UnifiedSynthesisRunner
 from .models import MarketState, PositionRecommendation, SynthesisReport
+from .intelligence import (
+    MacroIntelligence,
+    MacroIntelligenceReport,
+    RiskIntelligence,
+    RiskIntelligenceReport,
+    AlphaIntelligence,
+    AlphaIntelligenceReport,
+    CrossSystemIntelligenceEngine,
+    UnifiedIntelligenceReport,
+)
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"  # Phase 3 Cross-System Intelligence
 __all__ = [
+    # Phase 1-2: Fusion & Quick Wins
     "FusionEngine",
     "SynthesizedView",
     "QuickWinsEngine",
@@ -40,4 +51,13 @@ __all__ = [
     "MarketState",
     "PositionRecommendation",
     "SynthesisReport",
+    # Phase 3: Cross-System Intelligence
+    "MacroIntelligence",
+    "MacroIntelligenceReport",
+    "RiskIntelligence",
+    "RiskIntelligenceReport",
+    "AlphaIntelligence",
+    "AlphaIntelligenceReport",
+    "CrossSystemIntelligenceEngine",
+    "UnifiedIntelligenceReport",
 ]
